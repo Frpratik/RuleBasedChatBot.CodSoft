@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main chat container */
+.chat-container {
+    width: 420px;
+    height: 600px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat header */
+.chat-header {
+    background-color: #2C8726;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Chatbox (scrollable area for messages) */
+.chatbox {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #ece5dd;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat input */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    align-items: center;
+}
+
+#userInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+}
+
+#sendBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#sendBtn img {
+    width: 44px;
+    height: 44px;
+}
+
+/* Chat bubbles */
+.chat-message {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+/* User message (green bubble, aligned to the right) */
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    padding: 10px 15px; 
+    border-radius: 10px;
+    font-size: 14px;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    margin-top: 17px;
+}
+
+/* Bot message (white bubble, aligned to the left) */
+.bot-message {
+    background-color: #fff;
+    align-self: flex-start;
+    padding: 10px 15px; 
+    border-radius: 10px;
+    font-size: 14px;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}
+
+/* Timestamps */
+.chat-message span.timestamp {
+    font-size: 10px;
+    color: #999;
+    position: absolute;
+    bottom: -18px; 
+    right: 10px; 
+}
+
+/* Scrollbar styling */
+.chatbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
